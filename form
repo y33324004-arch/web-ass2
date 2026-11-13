@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="/register" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fname">Full Name:</label><br>
+            <input type="text" id="fname" name="full_name" required minlength="3"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required minlength="8"><br><br>
+
+            <label for="confirm-password">Confirm Password:</label><br>
+            <input type="password" id="confirm-password" name="confirm_password" required minlength="8"><br><br>
+
+            <label for="dateofbirth">Date of birth:</label><br>
+            <input type="date" id="dateofbirth" name="date" required>
+
+     <fieldset>
+    <legend>Contact Information</legend>
+
+    <label for="phonenumber">Phone:</label><br>
+    <input type="tel" id="phonenumber" name="tel" placeholder="050-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 050-000-0000"><br><br>
+
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" rows="3"></textarea><br><br>
+
+    <label for="city">City:</label><br>
+    <select id="city" name="city">
+        <option value="">-- Select a city --</option>
+        <option value="gaza">Gaza</option>
+        <option value="ramallah">Ramallah</option>
+        <option value="safad">Safad</option>
+        <option value="hebron">Hebron</option>
+        <option value="nablus">Nablus</option>
+    </select>
+</fieldset>
+
+ <fieldset>
+    <legend>Preferences</legend> 
+    
+    <p>Gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br><br>
+
+    <p>Interests:</p>
+    <input type="checkbox" id="coding" name="interests" value="coding">
+    <label for="coding">Coding</label><br>
+
+    <input type="checkbox" id="design" name="interests" value="design">
+    <label for="design">Design</label><br>
+
+    <input type="checkbox" id="gaming" name="interests" value="gaming" checked>
+    <label for="gaming">Gaming</label><br>
+
+    <input type="checkbox" id="reading" name="interests" value="reading">
+    <label for="reading">Reading</label><br>
+
+    <input type="checkbox" id="sports" name="interests" value="sports">
+    <label for="sports">Sports</label>
+    <br><br>
+
+    <label for="skill">Skill Level (1-10):</label><br>
+    <input type="range" id="skill" name="skill_level" min="1" max="10" value="5">
+
+</fieldset>
+<fieldset>
+            <legend>Profile Picture</legend>
+            <label for="profile-pic">Upload Image:</label><br>
+            <input type="file" id="profile-pic" name="profile_picture" accept="image/*">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Terms & Submit</legend>
+            
+           
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the Terms and Conditions</label><br><br>
+
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+
+    </form>
+</body>
+</html>
